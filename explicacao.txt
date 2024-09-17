@@ -1,0 +1,64 @@
+EVENTOS NO JAVASCRIPT
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault()
+})
+
+* .addEventListener('submit', ...): O método addEventListener está sendo usado para escutar um evento específico no formulário. No caso, o evento é o 'submit', isso significa que estamos dizendo ao formulário: "Quando o formulário for submetido, execute uma função."
+
+* function(e) {...}: Esta é uma função anônima que será executada quando o evento 'submit' ocorrer. A letra "e" é um parâmetro da função que representa o objeto do evento. Esse objeto contém informações sobre o evento que acabou de acontecer, no caso, o evento de envio do formulário. Essa função será executada toda vez que o formulário for enviado (quando o usuário tenta submeter o formulário).
+
+*  preventDefault()  Esse método previne o comportamento padrão do evento. No caso do evento 'submit', o comportamento padrão seria enviar o formulário para o servidor e recarregar a página. Ao chamar e.preventDefault(), estamos impedindo que o formulário seja enviado. Isso é muito útil quando você quer validar os dados do formulário antes de permitir que ele seja enviado, ou quando você quer enviar os dados de forma assíncrona (usando, por exemplo, AJAX).
+
+* O que acontece quando esse código é executado?
+
+1 - O usuário preenche o formulário e tenta enviá-lo (clicando em um botão de envio ou pressionando Enter).
+2 - O evento 'submit' é detectado pelo addEventListener.
+3 - A função anônima associada ao evento é executada.
+4 - Dentro dessa função, o método e.preventDefault() é chamado, o que impede o comportamento padrão do envio do formulário.
+5 - O formulário não é enviado ao servidor, e a página não é recarregada.
+-------------------------------------------------------------------------
+function validaNome(nomeCompleto){
+ const nomeComoArray =  nomeCompleto.split (' ')
+ return nomeComoArray.length >= 2
+}
+
+* Essa função verifica se o nome completo fornecido contém pelo menos duas palavras (ou seja, se a pessoa digitou ao menos um nome e um sobrenome).
+
+* function validaNome(nomeCompleto): Aqui estamos declarando uma função chamada validaNome.A função recebe um parâmetro chamado nomeCompleto, que deve ser uma string representando o nome completo da pessoa.
+const nomeComoArray = nomeCompleto.split(' '):
+
+* A função usa o método .split(' ') no valor de nomeCompleto.
+O método .split(' ') divide a string onde encontra espaços (' ') e retorna um array de palavras. Cada palavra que estava separada por um espaço se torna um elemento no array.
+
+     Exemplo: Se o nome completo for "João Silva", após o .split(' '), o resultado será o array ["João", "Silva"].
+     Se o nome for "Ana", o resultado será o array ["Ana"].
+     O resultado é armazenado na constante nomeComoArray.
+
+* return nomeComoArray.length >= 2: Aqui a função verifica se o comprimento do array (ou seja, o número de palavras que foram separadas pelo .split(' ')) é maior ou igual a 2.
+
+nomeComoArray.length retorna o número de elementos no array (ou seja, o número de palavras no nome). Se o número de palavras for maior ou igual a 2, a função retorna true (válido). Se houver menos de 2 palavras, a função retorna false (inválido).
+-------------------------------------------------------------------------
+const nomeBeneficiario = document.getElementById('nome-beneficiario')
+
+    // Verifica se o nome é válido usando a função validaNome
+    if (validaNome (nomeBeneficiario.value)=== false){
+        alert('O nome não está completo.')
+    } else{
+        alert('Tudo certo!')
+    }
+
+* const nomeBeneficiario = document.getElementById('nome-beneficiario'): Este código está capturando o valor de um campo de input com o id="nome-beneficiario". Ou seja, você tem um campo no seu HTML com esse ID.
+
+* if (validaNome(nomeBeneficiario.value) === false): Aqui, estamos chamando a função "validaNome", que você já definiu anteriormente. Ela verifica se o nome digitado no campo de input contém pelo menos duas palavras.
+Se a função "validaNome" retornar false (ou seja, o nome não está completo, tem apenas uma palavra), o código dentro do if será executado.
+
+* O que acontece quando o formulário é enviado:
+
+1 - O usuário digita algo no campo de input com o ID nome-beneficiario.
+2 - Quando o usuário tenta enviar o formulário (clicando no botão ou pressionando "Enter"):
+3 - O envio padrão do formulário é impedido por e.preventDefault().
+4 - O código coleta o valor digitado no campo nome-beneficiario.
+5 - A função validaNome é chamada para verificar se o nome contém pelo menos duas palavras.
+6 - Se o nome não for válido (ou seja, tiver menos de duas palavras), um alerta aparece dizendo "O nome não está completo."
+7 - Se o nome for válido (ou seja, tiver pelo menos duas palavras), o alerta "Tudo certo!" aparece.

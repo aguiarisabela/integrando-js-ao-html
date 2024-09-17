@@ -1,0 +1,40 @@
+.container{
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+#form-depositos{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input, textarea {
+    display: block;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+textarea{
+    resize: none;
+}
+
+button{
+    background-color: rgb(97, 157, 6);
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    padding: 5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    width: 50%;
+    font-size: 20px;
+    
+}
+
+button:hover{
+    color: rgb(97, 157, 6);
+    background-color: rgba(182, 254, 81, 0.493);
+}

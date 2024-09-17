@@ -13,7 +13,7 @@ form.addEventListener('submit', function(e) {
 
     const numeroContabeneficiario = document.getElementById('numero-conta')
     const valorDeposito = document.getElementById('valor-deposito')
-    const mensagemSucesso = `Montante de: <strong>${valorDeposito.value}</strong> enviado para o cliente: <strong>${nomeBeneficiario.value}</strong>`
+    const mensagemSucesso = `O valor de: <strong>${valorDeposito.value}</strong> enviado para o cliente: <strong>${nomeBeneficiario.value}</strong>`
     const mensagemErro = `O nome está incompleto.`
     
     /* No código, o value está sendo usado para acessar o valor digitado pelo usuário nos campos de input de um formulário HTML. Se o usuário digitou "1000" no campo de valor do depósito e "João Silva" no campo de nome do beneficiário, então:

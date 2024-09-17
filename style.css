@@ -1,7 +1,8 @@
 .container{
-    text-align: left;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 
 #form-depositos{
     text-align: center;
@@ -9,12 +10,13 @@
 }
 
 input, textarea {
-    display: block;
+    display: center;
     border-radius: 5px;
-    width: 100%;
+    width: 60%;
     box-sizing: border-box;
     padding: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+
 }
 
 textarea{
@@ -22,7 +24,7 @@ textarea{
 }
 
 button{
-    background-color: rgb(97, 157, 6);
+    background-color: rgb(6, 157, 6);
     border-radius: 5px;
     border: 0;
     cursor: pointer;
@@ -37,4 +39,25 @@ button{
 button:hover{
     color: rgb(97, 157, 6);
     background-color: rgba(182, 254, 81, 0.493);
+}
+
+.mensagemsucesso{
+    background-color: rgb(6, 157, 6);
+    padding: 16px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    display: none;
+    width: 60%;
+}
+
+.mensagemerro{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    padding: 8px;
+    background-color:rgb(254, 30, 30);
+    color: #fff;
+    margin-bottom: 8px;
+    margin-top: 0;
+    width: 58%;
+    display: none;
 }
